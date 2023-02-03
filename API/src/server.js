@@ -3,10 +3,10 @@ const PORT = 3333;
 const app = express();
 
 //request params são obrigatórios
-app.get("/message/:id/:user", (request, response) => {
-  const {id, user} = request.params;
+app.get("/message/:id/:user/:tag", (request, response) => {
+  const {id, user, tag} = request.params;
 
-  response.send(`id da mensagem: ${id}. Para o usuário : ${user}`);
+  response.send(`id da mensagem: ${id}. Para o usuário : ${user}. tag: ${tag}`);
 });
 
 //request query não é obrigatório
