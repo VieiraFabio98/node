@@ -1,3 +1,4 @@
 # node
 
-Estudos sobre back-end e Node.js
+Estudos sobre back-end e Node.js.
+Utilizar npm install caso usar um gitclone.
