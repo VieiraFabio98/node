@@ -1,3 +1,5 @@
+const appError = require("../utils/appError");
+
 class usersControllers {
   /*
     o controller pode ter no máximo 5 métodos
@@ -9,7 +11,9 @@ class usersControllers {
   */ 
   create(request, response){
     const {name, senha, email} = request.body;
-
+    if(!name){
+      throw new appError("O nome é obrigatório");
+    }
     response.status(201).json({name, senha, email});
   }
 }
