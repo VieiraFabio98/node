@@ -10,7 +10,7 @@ class usersControllers {
     delete - DELETE para remover um registro
   */ 
   create(request, response){
-    const {name, senha, email} = request.body;
+    const {name, senha, email} = request.body ;
     if(!name){
       throw new appError("O nome é obrigatório");
     }
