@@ -10,7 +10,7 @@ class usersControllers {
   create(request, response){
     const {name, senha, email} = request.body;
 
-    response.json({name, senha, email});
+    response.status(201).json({name, senha, email});
   }
 }
 
