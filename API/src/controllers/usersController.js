@@ -52,7 +52,7 @@ class usersControllers {
     }
 
     if(password && old_password){
-      console.log(user.password)
+    
       const checkOldPassword = await compare(old_password, user.password);
 
       if(!checkOldPassword){
@@ -67,9 +67,9 @@ class usersControllers {
     name = ?,
     email = ?,
     password = ?,
-    updated_at = ?
+    updated_at = DATETIME('now')
     WHERE id = ?`,
-    [user.name, user.email, user.password, new Date(), id]);
+    [user.name, user.email, user.password, id]);
 
     return response.json();
   }
