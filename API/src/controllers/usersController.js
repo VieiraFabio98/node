@@ -19,7 +19,7 @@ class usersControllers {
     if(checkUserExist){
       throw new appError("Este email ja está em uso");
     }
-    console.log(password)
+  
     const hashedPassword = await(hash(password, 8));
 
     await dataBase.run("INSERT INTO users (name, password, email) VALUES (?, ?, ?)", [name, hashedPassword, email]);
